@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="file_coverter.js"></script>
+    
+    <div class = "heading">
+    <img src="oriented.jpg" class="image" style="max-width: 62.5px; max-height:62.5px" >
+        <a href = "index.html"><i class = "home"  ></i> Home</a>
+        <a href = "cards.html"><i class = "flashcards"></i>Cards</a>
+        <a href ="index.html"><i class = "logo" ></i></a>
+    </div>
+</head>
+<body>
+    <h1>
+        Flashcard Creator
+    </h1>
+    <a>Import from file. Only Markdown accepted. </a>
+    <br>
+    <input type="file" name="" id="" accept=".md">
+    <br>
+    <input type="button" value="Submit" onclick = "Convert()">
+    
+    <br>
+    <br>
+    <h3>    Create your own flashcards manually:     
+    </h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Field 1</th>
+                <th>Field 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <td>
+                <tr>
+                    <td><input type="" name ="" id ="" maxlength="500" placeholder="Type or paste front side"></td>
+                    <td><input type="text" name ="" id ="" maxlength="500" placeholder="Second Side"></td>
+                </tr>
+            </td>
+        </tbody>
+    </table>
+    <button> Confirm Flashcard</button>
+    
+</body>
+</html>

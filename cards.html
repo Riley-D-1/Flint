@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards</title>
+    <div class = "heading"></div>
+</head>
+
+<script>
+    document.addEventListener('keydown',(event) => {
+    if (event.key === ' '){
+        console.log("Space");
+    } else if (event.key === 'ArrowRight'){
+        console.log("arrow_key_right");
+    }    
+    else if (event.key === 'ArrowLeft'){
+        console.log("arrow_key_left");
+    }
+    });
+    const next_button = document.getElementById("Next")
+    console.log(next_button)
+    next_button.addEventListener('click',function(){
+        console.log("Next button clicked");
+    });
+</script>
+<body>
+    <div class = flashcards>
+
+        Flashcard Num goes here
+<!-- Need to add flashcard functionality-->
+    </div>
+        <button id = "Previous" >
+        Previous
+        </button>
+        <button id = "Next">
+        Next 
+        </button>
+        <button id ="Flip">
+            Flip
+        </button>
+</body>
+</html>
