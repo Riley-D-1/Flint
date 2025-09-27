@@ -6,37 +6,71 @@
     <div class = "heading"></div>
 </head>
 
-<script>
-    document.addEventListener('keydown',(event) => {
-    if (event.key === ' '){
-        console.log("Space");
-    } else if (event.key === 'ArrowRight'){
-        console.log("arrow_key_right");
-    }    
-    else if (event.key === 'ArrowLeft'){
-        console.log("arrow_key_left");
-    }
-    });
-    const next_button = document.getElementById("Next")
-    console.log(next_button)
-    next_button.addEventListener('click',function(){
-        console.log("Next button clicked");
-    });
-</script>
+
 <body>
     <div class = flashcards>
-
-        Flashcard Num goes here
+        <p id="flash_info">why</p>
+        
+        
 <!-- Need to add flashcard functionality-->
     </div>
         <button id = "Previous" >
-        Previous
+            Previous
         </button>
         <button id = "Next">
-        Next 
+            Next 
         </button>
         <button id ="Flip">
             Flip
         </button>
 </body>
+<script>
+    function flip(state){
+        if (state === "front"){
+            return flashcards[id].back;
+        }else{
+           return flashcards[id].front;
+        }
+    }
+    let id = 0
+    const flashcards = [
+            {front:"What is the 5 oceans of the world",back:"The answer is Pacific Ocean, Atlantic Ocean, Indian Ocean, Southern Ocean, and Arctic Ocean"},
+            {front:"What is the capital of canada?",back:"Ottawa"}
+        ]
+    let cur_state = "front"
+    document.addEventListener('keydown',(event) => {
+    if (event.key === ' '){
+        console.log("Space");
+        console.log(cur_state)
+        console.log(flip(cur_state))
+        document.getElementById("flash_info").textContent = flip(cur_state)
+        if (cur_state === "front"){
+            cur_state = "back"
+        }
+        else{
+            cur_state = "front"
+        }  
+    } else if (event.key === 'ArrowRight'){
+        console.log("arrow_key_right");
+        id++
+        console.log(id)
+        document.getElementById("flash_info").textContent = flashcards[id].front
+    }    
+    else if (event.key === 'ArrowLeft'){
+        console.log("arrow_key_left");
+        id--
+        console.log(id)
+        document.getElementById("flash_info").textContent = flashcards[id].front
+    }
+    });
+
+    const next_button = document.getElementById("Next")
+    next
+    console.log(next_button)
+    myButton.addEventListener('click', handleButtonClick);
+    // In the future will import from the flashcard maker or manual flashcard creation
+    
+    
+    
+</script>
 </html>

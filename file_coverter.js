@@ -1,12 +1,11 @@
-import {marked} from "marked";
+import marked from "marked";
 import html2pdf from 'html2pdf.js';
 
-function Convert(fileInput){
+function convert(fileInput){
     fileInput.addEventListener('change', (event) => {
         const file = event.target.files[0];
         if (file) {
             const reader = new FileReader();
-
                 reader.onload = (e) => {
                     const fileContent = e.target.result;}
                 }
