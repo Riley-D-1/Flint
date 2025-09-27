@@ -4,8 +4,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flashcards</title>
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="file_coverter.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        function convert(fileInput){
+        fileInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                    reader.onload = (e) => {
+                        const fileContent = e.target.result;}
+                    }
+                });
+        const htmlContent = marked.parse(fileContent);
+        html2pdf().from(htmlContent).save('document.pdf');
+        const options = {
+            margin: 1,
+            filename: 'test.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+        }
+        html2pdf().set(options).from(container).save();
+    }
+    </script>
     <div class = "heading">
         <img src="oriented.jpg" class="image" style="max-width: 62.5px; max-height:62.5px" >
         <a href = "index.html"><i class = "home"  ></i> Home</a>
@@ -21,7 +43,7 @@
     <br>
     <input type="file" name="" id="" accept=".md">
     <br>
-    <input type="button" value="Submit" onclick = "Convert()">
+    <input type="button" value="Submit" onclick = "convert()">
     
     <br>
     <br>
