@@ -4,13 +4,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flashcards</title>
     <div class = "heading"></div>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cards_style.css">
+    <div class = "heading">
+        <img src="oriented.jpg" class="image" style="max-width: 62.5px; max-height:62.5px" >
+        <a href = "index.html"><i class = "home"  ></i> Home</a>
+        <a href = "cards.html"><i class = "flashcards"></i>Cards</a>
+        <a href ="print.html"><i class = "print" ></i>Print</a>
+        <a href ="flash_card_maker.html"><i class = "flashcard_Maker" ></i>Flashcard Maker</a>
+    </div>
 </head>
 
 
 <body>
     <div class = flashcards>
+        <div id = "flash_box">
         <p id="flash_info">why</p>
-        
+        </div>
         
 <!-- Need to add flashcard functionality-->
     </div>
@@ -20,10 +30,14 @@
 </body>
 <script>
     let id = 0
-    const flashcards = [
-            {front:"What is the 5 oceans of the world",back:"The answer is Pacific Ocean, Atlantic Ocean, Indian Ocean, Southern Ocean, and Arctic Ocean"},
-            {front:"What is the capital of canada?",back:"Ottawa"}
-        ]
+    const temp_flashcards = localStorage.getItem("Flashcard");
+    console.log(temp_flashcards)
+    flashcards= Array.from(temp_flashcards)
+    console.log(flashcards)
+    //const flashcards = [
+            //{front:"What is the 5 oceans of the world",back:"The answer is Pacific Ocean, Atlantic Ocean, Indian Ocean, Southern Ocean, and Arctic Ocean"},
+            //{front:"What is the capital of canada?",back:"Ottawa"}
+        //]
     let cur_state = "front"
     function flip(state,id){
         if (state === "front"){

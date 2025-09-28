@@ -4,7 +4,8 @@ An electron/web based FOSS flashcard application to solve the problems of existi
 
 ### Please note
 - This is my second ever time using JS and my most complex use of CSS and Html ever so please ignore the fact everything took ages.
-- The demo is currently kot connected and lacking lots of the core ideas and functionality 
+- The demo is currently  lacking lots of the core ideas and functionality 
+-
 ### Showcase of Project
 http://riley-d-1.github.io/Flint/ 
 #### Why did I create flint?

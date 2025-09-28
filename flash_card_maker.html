@@ -5,45 +5,26 @@
     <title>Flashcards</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <script>
-        function convert(fileInput){
-        fileInput.addEventListener('change', (event) => {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                    reader.onload = (e) => {
-                        const fileContent = e.target.result;}
-                    }
-                });
-        const htmlContent = marked.parse(fileContent);
-        html2pdf().from(htmlContent).save('document.pdf');
-        const options = {
-            margin: 1,
-            filename: 'test.pdf',
-            image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { scale: 2 },
-            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-        }
-        html2pdf().set(options).from(container).save();
-    }
-    </script>
+    
+    
     <div class = "heading">
         <img src="oriented.jpg" class="image" style="max-width: 62.5px; max-height:62.5px" >
         <a href = "index.html"><i class = "home"  ></i> Home</a>
         <a href = "cards.html"><i class = "flashcards"></i>Cards</a>
-        <a href ="index.html"><i class = "logo" ></i></a>
+        <a href ="print.html"><i class = "print" ></i>Print</a>
+        <a href ="flash_card_maker.html"><i class = "flashcard_Maker" ></i>Flashcard Maker</a>
     </div>
 </head>
 <body>
     <h1>
         Flashcard Creator
     </h1>
+    <h1>Functionality not implemented propely. Work in progress</h1>
     <a>Import from file. Only Markdown accepted. </a>
     <br>
-    <input type="file" name="" id="" accept=".md">
+    <input type="file" id="markdown_file" accept=".md">
     <br>
-    <input type="button" value="Submit" onclick = "convert()">
+    <input type="button" id= "Submit_button" value="Submit" onclick = "convert()">
     
     <br>
     <br>
@@ -59,13 +40,37 @@
         <tbody>
             <td>
                 <tr>
-                    <td><input type="" name ="" id ="" maxlength="500" placeholder="Type or paste front side"></td>
-                    <td><input type="text" name ="" id ="" maxlength="500" placeholder="Second Side"></td>
+                    <td><input type="text" id ="front_input_flashcard" maxlength="500" placeholder="Type or paste front side"></td>
+                    <td><input type="text" id ="back_input_flashcard" maxlength="500" placeholder="Second Side"></td>
                 </tr>
             </td>
         </tbody>
     </table>
-    <button> Confirm Flashcard</button>
+    <input type="button" id = "add_flashcard_button"value="Add flashcard" onclick = "flash_add()"></input>
     
 </body>
+<script>
+        function convert() {
+            const fileInput = document.getElementById("markdown_file");
+            if (fileInput.files.length > 0) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const fileContent = e.target.result;
+                    const htmlContent = marked.parse(fileContent);
+                    localStorage.setItem("Flashcard", htmlContent);
+                    alert("Markdown converted and saved.");
+                };
+                reader.readAsText(fileInput.files[0]);
+            } else {
+                alert("Please select a Markdown file.");
+            }
+        }   
+
+        function flash_add(){
+            console.log(document.getElementById("front_input_flashcard"))
+            console.log(document.getElementById("front_input_flashcard").value)
+            console.log(document.getElementById("back_input_flashcard").value)
+        }
+       
+    </script>
 </html>
