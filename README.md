@@ -20,4 +20,6 @@ I created flint in order to remove the paywall locked features of popular flashc
 - Html
 - Css
 ### Demo Install Instructions
-Visit Github Sites Url - http://riley-d-1.github.io/Flint/
+- Visit Github Sites Url - http://riley-d-1.github.io/Flint/
+- Then download the test markdown file
+- Use the flashcard
