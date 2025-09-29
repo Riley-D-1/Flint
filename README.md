@@ -7,7 +7,7 @@ An electron/web based FOSS flashcard application to solve the problems of existi
 - The demo is currently  lacking lots of the core ideas and functionality 
 
 ### Showcase of Project
-http://riley-d-1.github.io/Flint/ 
+
 #### Why did I create flint?
 I created flint in order to remove the paywall locked features of popular flashcard apps and allow for easier creation of flashcards.I especially wanted to improve on the printing provess of existing flashcard apps which led to the creation of this program.
 ### Inspiration

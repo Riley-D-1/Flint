@@ -3,30 +3,36 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flashcards</title>
-    <div class = "heading"></div>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="cards_style.css">
-    <div class = "heading">
-        <img src="oriented.jpg" class="image" style="max-width: 62.5px; max-height:62.5px" >
-        <a href = "index.html"><i class = "home"  ></i> Home</a>
-        <a href = "cards.html"><i class = "flashcards"></i>Cards</a>
-        <a href ="print.html"><i class = "print" ></i>Print</a>
-        <a href ="flash_card_maker.html"><i class = "flashcard_Maker" ></i>Flashcard Maker</a>
-    </div>
 </head>
 
 
 <body>
+    <div class="heading">
+        <img src="oriented.jpg" alt="Logo" style="max-width: 62.5px; max-height: 62.5px;"></a>
+        <div class="header-r">
+            <a href="index.html">Home</a>
+            <a href="cards.html">Cards</a>
+            <a href="print.html">Print</a>
+            <a href="flash_card_maker.html">Flashcard Maker</a>
+            <a href="help.html">Help</a>
+        </div>
+    </div>
+
+
     <div class = flashcards>
         <div id = "flash_box">
-        <p id="flash_info">Flashcards not avaible please use flashcard maker to load a markdown file</p>
+        <p id="flash_info">Flashcards not found, please use the flashcard maker to load a markdown file. (Once loaded click next to remove this help tip)</p>
         </div>
         
-<!-- Need to add flashcard functionality-->
+<!-- Need to add further flashcard functionality-->
     </div>
-        <button id = "Previous" >Previous</button>
-        <button id = "Next">Next</button>
-        <button id ="Flip">Flip</button>
+        <div id = "buttons">
+            <button id = "Previous" >Previous</button>
+            <button id ="Flip">Flip</button>
+            <button id = "Next">Next</button>
+        </div>
 </body>
 <script>
     

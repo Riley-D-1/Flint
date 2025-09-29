@@ -1,7 +1,14 @@
-.flash_info{
-    border: 2px solid #333;
-    padding: 15px; 
+#flash_info{
+    border: 2px solid #ffffff;
+    padding: 150px; 
     margin: 20px;
-    background-color: #f9f9f9; 
+    background-color: #281c8d6c; 
     border-radius: 8px; 
+    font-size: 24px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    text-align: center;
+}
+#buttons{
+    text-align: center;
 }
