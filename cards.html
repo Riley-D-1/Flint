@@ -19,7 +19,7 @@
 <body>
     <div class = flashcards>
         <div id = "flash_box">
-        <p id="flash_info">why</p>
+        <p id="flash_info">Flashcards not avaible please use flashcard maker to load a markdown file</p>
         </div>
         
 <!-- Need to add flashcard functionality-->
@@ -29,15 +29,17 @@
         <button id ="Flip">Flip</button>
 </body>
 <script>
-    let id = 0
-    const temp_flashcards = localStorage.getItem("Flashcard");
-    console.log(temp_flashcards)
-    flashcards= Array.from(temp_flashcards)
-    console.log(flashcards)
+    
     //const flashcards = [
             //{front:"What is the 5 oceans of the world",back:"The answer is Pacific Ocean, Atlantic Ocean, Indian Ocean, Southern Ocean, and Arctic Ocean"},
             //{front:"What is the capital of canada?",back:"Ottawa"}
         //]
+
+    let id = 0
+    const temp_flashcards = localStorage.getItem("Flashcard");
+    console.log(temp_flashcards)
+    flashcards = JSON.parse(temp_flashcards)
+    console.log(flashcards)
     let cur_state = "front"
     function flip(state,id){
         if (state === "front"){

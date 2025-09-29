@@ -19,7 +19,6 @@
     <h1>
         Flashcard Creator
     </h1>
-    <h1>Functionality not implemented propely. Work in progress</h1>
     <a>Import from file. Only Markdown accepted. </a>
     <br>
     <input type="file" id="markdown_file" accept=".md">
@@ -50,11 +49,39 @@
     
 </body>
 <script>
+    function convert(){
+        const fileInput = document.getElementById("markdown_file");
+        const file = fileInput.files[0]
+        try {
+            file.text().then(markdownText => {
+                const tokenList = marked.lexer(markdownText || "");
+                const flashcards = [];
+                for (const token of tokenList) {
+                    if (token.type === "table") {
+                        for (const row of token.rows) {
+                            const front = row[0]?.text || "";
+                            const back = row[1]?.text || "";
+                            flashcards.push({ front, back });
+                        }
+                    }
+                }
+                localStorage.setItem("Flashcard", JSON.stringify(flashcards));
+                console.log(JSON.stringify(flashcards));
+                alert("Markdown converted and saved.");
+            })
+        } catch{
+           alert("Markdown conversion failed. Check help page"); 
+           console.log(console.error());
+        }
+    }
+
+        /*
         function convert() {
             const fileInput = document.getElementById("markdown_file");
             if (fileInput.files.length > 0) {
                 const reader = new FileReader();
                 reader.onload = (e) => {
+                    
                     const fileContent = e.target.result;
                     const htmlContent = marked.parse(fileContent);
                     localStorage.setItem("Flashcard", htmlContent);
@@ -65,12 +92,13 @@
                 alert("Please select a Markdown file.");
             }
         }   
+        */
 
-        function flash_add(){
-            console.log(document.getElementById("front_input_flashcard"))
-            console.log(document.getElementById("front_input_flashcard").value)
-            console.log(document.getElementById("back_input_flashcard").value)
-        }
+    function flash_add(){
+        console.log(document.getElementById("front_input_flashcard"))
+        console.log(document.getElementById("front_input_flashcard").value)
+        console.log(document.getElementById("back_input_flashcard").value)
+    }
        
     </script>
 </html>
