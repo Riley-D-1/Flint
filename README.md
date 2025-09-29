@@ -22,4 +22,4 @@ I created flint in order to remove the paywall locked features of popular flashc
 ### Demo Install Instructions
 - Visit Github Sites Url - http://riley-d-1.github.io/Flint/
 - Then download the test markdown file
-- Use the flashcard
+- Use the flashcard app by importing markdown file and then flashcarding
