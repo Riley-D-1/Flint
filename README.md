@@ -4,16 +4,22 @@ An electron/web based FOSS flashcard application to solve the problems of existi
 
 ### Please note
 - This is my second ever time using JS and my most complex use of CSS and Html ever so please ignore the fact everything took ages.
-- The demo is currently  lacking lots of the core ideas and functionality 
-
+- The demo is currently  lacking lots of the core ideas and functionality such as printing, saving flashcards
+to the web and etc.
 ### Showcase of Project
+Video Demo
 
-#### Why did I create flint?
-I created flint in order to remove the paywall locked features of popular flashcard apps and allow for easier creation of flashcards.I especially wanted to improve on the printing provess of existing flashcard apps which led to the creation of this program.
+<video src="Flint Demo.mp4" width="480" height="360" controls></video>
+
+Screenshot
+![alt text](Flint_Screenshot.png)
+### Why did I create flint?
+I created flint in order to remove the paywall locked features of popular flashcard apps and allow for easier creation of flashcards. I especially wanted to improve on the printing provess of existing flashcard apps which led to the creation of this program.
 ### Inspiration
 - Quizlet
-- Anku
+- Anki
 
+### Devlog (See commits)
 ### Technologies used
 - Electron (planned)
 - JS
