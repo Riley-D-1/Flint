@@ -7,12 +7,12 @@ An electron/web based FOSS flashcard application to solve the problems of existi
 - The demo is currently  lacking lots of the core ideas and functionality such as printing, saving flashcards
 to the web and etc.
 ### Showcase of Project
-Video Demo
-
-<video src="Flint Demo.mp4" width="480" height="360" controls></video>
-
 Screenshot
 ![alt text](Flint_Screenshot.png)
+
+## How to I tick the theme Signal
+
+
 ### Why did I create flint?
 I created flint in order to remove the paywall locked features of popular flashcard apps and allow for easier creation of flashcards. I especially wanted to improve on the printing provess of existing flashcard apps which led to the creation of this program.
 ### Inspiration

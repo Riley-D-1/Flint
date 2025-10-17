@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards</title>
+    <link rel="stylesheet" href="../assets/Styling/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+</head>
+<body>
+    <div class="heading">
+        <img src="../assets/oriented.jpg" alt="Logo" style="max-width: 62.5px; max-height: 62.5px;"></a>
+        <div class="header-r">
+            <a href="index.html">Home</a>
+            <a href="cards.html">Cards</a>
+            <a href="print.html">Print</a>
+            <a href="flash_card_maker.html">Flashcard Maker</a>
+            <a href="help.html">Help</a>
+        </div>
+    </div>
+    <br>
+    <h1>
+        Flashcard Creator
+    </h1>
+    <a>Import from file. Only Markdown accepted. </a>
+    <br>
+    <input type="file" id="markdown_file" accept=".md">
+    <br>
+    <input type="button" id= "Submit_button" value="Submit" onclick = "convert()">
+    
+    <br>
+    <br>
+    <h3>    Create your own flashcards manually:  
+    <br> * I DO NOT WORK AT THE MOMENT PLEASE USE MARKDOWN FILES
+    </h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Field 1</th>
+                <th>Field 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <td>
+                <tr>
+                    <td><input type="text" id ="front_input_flashcard" maxlength="500" placeholder="Type or paste front side"></td>
+                    <td><input type="text" id ="back_input_flashcard" maxlength="500" placeholder="Second Side"></td>
+                </tr>
+            </td>
+        </tbody>
+    </table>
+    <input type="button" id = "add_flashcard_button"value="Add flashcard" onclick = "flash_add()"></input>
+    
+</body>
+<script>
+    function convert(){
+        const fileInput = document.getElementById("markdown_file");
+        const file = fileInput.files[0]
+        try {
+            file.text().then(markdownText => {
+                const tokenList = marked.lexer(markdownText || "");
+                const flashcards = [];
+                for (const token of tokenList) {
+                    if (token.type === "table") {
+                        for (const row of token.rows) {
+                            const front = row[0]?.text || "";
+                            const back = row[1]?.text || "";
+                            flashcards.push({ front, back });
+                        }
+                    }
+                }
+                localStorage.setItem("Flashcard", JSON.stringify(flashcards));
+                console.log(JSON.stringify(flashcards));
+                alert("Markdown converted and saved.");
+            })
+        } catch{
+           alert("Markdown conversion failed. Check help page"); 
+           console.log(console.error());
+        }
+    }
+
+        /*
+        function convert() {
+            const fileInput = document.getElementById("markdown_file");
+            if (fileInput.files.length > 0) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    
+                    const fileContent = e.target.result;
+                    const htmlContent = marked.parse(fileContent);
+                    localStorage.setItem("Flashcard", htmlContent);
+                    alert("Markdown converted and saved.");
+                };
+                reader.readAsText(fileInput.files[0]);
+            } else {
+                alert("Please select a Markdown file.");
+            }
+        }   
+        */
+
+    function flash_add(){
+        console.log(document.getElementById("front_input_flashcard"))
+        console.log(document.getElementById("front_input_flashcard").value)
+        console.log(document.getElementById("back_input_flashcard").value)
+    }
+       
+    </script>
+</html>

@@ -1,0 +1,48 @@
+body {
+	background-color: rgb(0, 0, 60);
+	margin-top: 0;
+}
+h1 {
+	color: white;
+    }
+body{
+	color:white;
+
+}
+table{
+	background-color: rgb(23, 30, 161)
+}
+.heading{
+	overflow: hidden;
+  	background-color: rgb(23, 30, 161);
+  	padding: 5px 5px;
+ 	display: flex;
+  	flex-wrap: inherit;
+  	align-items: center;
+  	justify-content: space-between;
+
+}
+.header a.logo {
+  	font-size: 25px;
+  	font-weight: bold;
+}
+.header-r {
+  	float: right;
+}
+.heading a {
+    color: rgb(255, 255, 255);  
+    padding: 5px 10px;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+}
+.heading a.active {
+  	background-color: rgb(255, 255, 255);
+  	color: rgb(0, 0, 0);
+}
+.heading a:hover {
+  	background-color: rgb(255, 255, 255);
+ 	color: rgba(0, 0, 0, 0.829);
+}
+
