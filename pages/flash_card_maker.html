@@ -79,25 +79,6 @@
         }
     }
 
-        /*
-        function convert() {
-            const fileInput = document.getElementById("markdown_file");
-            if (fileInput.files.length > 0) {
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    
-                    const fileContent = e.target.result;
-                    const htmlContent = marked.parse(fileContent);
-                    localStorage.setItem("Flashcard", htmlContent);
-                    alert("Markdown converted and saved.");
-                };
-                reader.readAsText(fileInput.files[0]);
-            } else {
-                alert("Please select a Markdown file.");
-            }
-        }   
-        */
-
     function flash_add(){
         console.log(document.getElementById("front_input_flashcard"))
         console.log(document.getElementById("front_input_flashcard").value)

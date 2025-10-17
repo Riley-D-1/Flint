@@ -5,13 +5,9 @@
     <title>Print</title>
     <link rel="stylesheet" href="../assets/Styling/style.css">
     <link rel="stylesheet" href="../assets/Styling/cards_style.css">
-    <script>
-        function print_flashcards(htmlContent){
-           htmlContent.forEach(element => {
-            
-           });
-        }
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="../assets/scripts/print.js"></script>
+
 </head>
 
 
@@ -27,6 +23,7 @@
         </div>
     </div>
     <br>
+    <h3>Not fully implemented</h3>
     <select id="Flashcard_set_selection">
         <option value="Double-Sided" disabled>No flashcards found</option>
     </select>
@@ -35,7 +32,7 @@
         <option value="Double-Sided">Double-Sided</option>
         <option value="Standard"selected>Standard</option>
     </select>
-    <button onclick="flash_cardprint()">Print flashcard set</button>
+    <button onclick="print_flashcards()">Print flashcard set</button>
     <h6>
         Note:
         Need help on what to choose?
