@@ -11,6 +11,7 @@ function print_flashcards(){
         doc.setFontSize(12);
         let yPos = 10
         flashcards.forEach((item) => {
+            console.log(item)
             doc.text(20, yPos, item);
             yPos += 10;
         });
