@@ -7,7 +7,18 @@
     <script src="../assets/scripts/cards.js"></script>
 </head>
 <body>
-<canvas id="game_window" width = "window.innerWidth" height = "window.innerHeight"></canvas>
+    <div class="heading">
+        <img src="../assets/oriented.jpg" alt="Logo" style="max-width: 62.5px; max-height: 62.5px;"></a>
+        <div class="header-r">
+            <a href="index.html">Home</a>
+            <a href="cards.html">Cards</a>
+            <a href="print.html">Print</a>
+            <a href="flash_card_maker.html">Flashcard Maker</a>
+            <a href="games.html">Games</a>
+            <a href="help.html">Help</a>
+        </div>
+    </div>
+    <canvas id="game_window" width = "window.innerWidth" height = "window.innerHeight"></canvas>
 </body>
 <script>
     const canvas = document.getElementById("game_window")
@@ -15,7 +26,10 @@
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
     // stubs time lol
-    
+    // So going to add signal minigame
+    function signal_strength_check(){
+        console.log()
+    }
     function Signal_finding(){
         let signal_random = Math.random()
         let signal= signal_strength + signal_random 
