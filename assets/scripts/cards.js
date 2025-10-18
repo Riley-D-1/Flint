@@ -1,4 +1,3 @@
-console.log("Cards code loaded")
 let id = -1
 const temp_flashcards = localStorage.getItem("Flashcard");
 console.log(temp_flashcards)
@@ -35,6 +34,7 @@ else if (event.key === 'ArrowLeft'){
     id = previous(id)
 }
 });
+
 // Must be DOM content loaded in order to function correctly 
 document.addEventListener('DOMContentLoaded', function() {
     const next_button = document.getElementById("Next")

@@ -1,3 +1,32 @@
-#signal_game_thumbnail{
-    size: 50px;
+img {
+    max-width: 45%;
+    height: auto;
+    display: inline-block;
+}
+#match_image {
+    float: right;
+}
+/* I HATE CSS OMG THIS still dont work*/
+/* Attempted using AI and it cant even do it 😭😭😭😭😭*/
+#match_text{
+    position: relative;
+    left: 55%;
+    top:auto;
+}
+
+h2 {
+    max-width: 45%;
+    margin: 0;
+    padding: 0;
+}
+
+h4 {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    max-width: 45%;
+    text-align: left; 
+}
+body{
+    overflow-x: hidden;
 }

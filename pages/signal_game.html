@@ -10,7 +10,7 @@
 <body>
     
     <div class="heading">
-        <img src="../assets/oriented.jpg" alt="Logo" style="max-width: 62.5px; max-height: 62.5px;"></a>
+        <img src="../assets/images/oriented.jpg" alt="Logo" style="max-width: 62.5px; max-height: 62.5px;"></a>
         <div class="header-r">
             <a href="index.html">Home</a>
             <a href="cards.html">Cards</a>
@@ -76,6 +76,12 @@
         // Blank for the info, may make it to match bg
     
    }
+   function draw_screen(text){
+        ctx.fillText(text)
+        // Draw background colour and then just trigger the cards code
+        // Ensure that visibility of the buttons and text turns on and :D
+        // Might need to modify
+   }
    function tree_draw(){
         console.log("stub")
    }
@@ -97,6 +103,12 @@
             console.log("filler")
         }
     }
+    function main_loop(){
+        let running = True
+        while (running === True){
+            console.log("filler")
+        }
+    }
     draw_tablet()
-
+    draw_screen()
 </script>
