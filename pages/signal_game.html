@@ -4,9 +4,11 @@
     <meta name = "viewport" content="width=device-width, initial-scale=1.0">
     <title>Signal Game</title>
     <link rel = "stylesheet" href = "../assets/Styling/style.css">
+    <link rel = "stylesheet" href = "../assets/Styling/signal_style.css">
     <script src="../assets/scripts/cards.js"></script>
 </head>
 <body>
+    
     <div class="heading">
         <img src="../assets/oriented.jpg" alt="Logo" style="max-width: 62.5px; max-height: 62.5px;"></a>
         <div class="header-r">
@@ -18,6 +20,21 @@
             <a href="help.html">Help</a>
         </div>
     </div>
+    <!--
+    <div class = flashcards>
+        <div id = "flash_box">
+        <p id="flash_info">Flashcards not found, please use the flashcard maker to load a markdown file. (Once loaded click next to remove this help tip)</p>
+        </div>
+        
+    Need to add further flashcard functionality
+    </div>
+        <div id = "buttons">
+            <button id = "Previous" >Previous</button>
+            <button id ="Flip">Flip</button>
+            <button id = "Next">Next</button>
+        </div>
+    -->
+</body>
     <canvas id="game_window" width = "window.innerWidth" height = "window.innerHeight"></canvas>
 </body>
 <script>
@@ -25,10 +42,49 @@
     const ctx = canvas.getContext("2d")
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
+    ctx.fillStyle = "#0D374E"
+    ctx.fillRect(0, 0, canvas.width, canvas.height);  
     // stubs time lol
+    // The cards will be inside like a tbalet and you have to get signal strngth to win 
     // So going to add signal minigame
+    function draw_tablet(){
+        // Need to add more depth
+        // this is the dark rugged casing
+        ctx.fillStyle = "black"
+        ctx.lineJoin = "round"
+        ctx.lineWidth = 90
+        ctx.strokeStyle = '#1B1B1C'
+        ctx.strokeRect(480, 180, 1000, 600)
+        //This is the atenna 
+        ctx.lineWidth = 20
+        ctx.strokeRect(1400, 25, 8, 130) 
+
+        // This is the like black part of the screen
+        ctx.strokeStyle = "Black"
+        
+        ctx.lineWidth = 50
+        ctx.strokeRect(500, 200, 960, 560) //The like
+
+        // This is the camera dot
+        ctx.strokeStyle = "Blue"
+
+        // seperate function for screen?
+        //This is the blank screen ( To be completed and filled with stuff) 
+        ctx.fillStyle = '#ffffff'
+        ctx.fillRect(525, 225, 920, 515)
+        
+        // Blank for the info, may make it to match bg
+    
+   }
+   function tree_draw(){
+        console.log("stub")
+   }
+
     function signal_strength_check(){
-        console.log()
+        let time_since_last_flashcard = 1;
+        if (time_since_last_flashcard <= 1){
+            console.log("Silly boi")
+        }
     }
     function Signal_finding(){
         let signal_random = Math.random()
@@ -41,5 +97,6 @@
             console.log("filler")
         }
     }
+    draw_tablet()
 
 </script>
