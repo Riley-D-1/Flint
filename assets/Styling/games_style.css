@@ -6,14 +6,15 @@ img {
 #match_image {
     float: right;
 }
-/* I HATE CSS OMG THIS still dont work*/
-/* Attempted using AI and it cant even do it 😭😭😭😭😭*/
-#match_text{
-    position: relative;
-    left: 55%;
-    top:auto;
-}
+/* I HATE CSS BUT I DID IT :D*/
 
+#text_block{
+    display: flex;
+    justify-content: space-between;
+}
+#signal_text,#match_text{
+    width: 45%;
+}
 h2 {
     max-width: 45%;
     margin: 0;
@@ -24,7 +25,7 @@ h4 {
     height: auto;
     margin: 0;
     padding: 0;
-    max-width: 45%;
+    max-width: 100%;
     text-align: left; 
 }
 body{
