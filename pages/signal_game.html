@@ -41,11 +41,11 @@
     // stubs time lol
     // The cards will be inside like a tbalet and you have to get signal strngth to win 
     // So going to add signal minigame
-    function signal{
+    function signal(bar_amount){
         ctx.fillStyle = "white"
-        for(let i = 0;i<4;i++){
-            let bar_height = (i+1*10)
-            ctx.fillRect();
+        for(let i = 0;i<bar_amount;i++){
+            let bar_height = (i+i*10)
+            ctx.fillRect(1350 + i * 15, 300 - bar_height, 10, bar_height);
         }
     }
     function draw_tablet(){
@@ -71,12 +71,6 @@
         ctx.lineWidth = 50
         ctx.fillRect(524, 225, 911, 510) 
     }
-    function story(){
-
-    }
-    function win(){
-        
-    }
     function tree_draw(){
         console.log("tree's drawn")
         const background = new Image();
@@ -85,34 +79,4 @@
             ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
         }
     }
-
-    function signal_decay(){
-        let time_since_last_flashcard = 1;
-        if (time_since_last_flashcard <= 1){
-            console.log("Silly boi")
-        }else if(time_since_last_flashcard <= 5){
-            console.log(filler)
-        }
-    }
-
-    function Signal_finding(){
-        let signal_random = Math.random()
-        let signal= signal_strength + signal_random 
-        if (signal <= 0.3){
-            console.log("Filler")
-        }else if(signal <= 0.6){
-            console.log()
-        }else {
-            console.log("filler")
-        }
-    }
-
-    function main_loop(){
-        tree_draw()
-        setTimeout(() => {
-            draw_tablet();
-        }, 50); 
-    }
-    main_loop()
-
 </script>
