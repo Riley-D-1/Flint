@@ -5,10 +5,9 @@
     <title>Signal Game</title>
     <link rel = "stylesheet" href = "../assets/Styling/style.css">
     <link rel = "stylesheet" href = "../assets/Styling/signal_style.css">
-    <script src="../assets/scripts/cards.js"></script>
+    <script src="../assets/scripts/test.js"></script>
 </head>
 <body>
-    
     <div class="heading">
         <img src="../assets/images/oriented.jpg" alt="Logo" style="max-width: 62.5px; max-height: 62.5px;"></a>
         <div class="header-r">
@@ -20,21 +19,16 @@
             <a href="help.html">Help</a>
         </div>
     </div>
-    <!--
     <div class = flashcards>
         <div id = "flash_box">
         <p id="flash_info">Flashcards not found, please use the flashcard maker to load a markdown file. (Once loaded click next to remove this help tip)</p>
         </div>
-        
-    Need to add further flashcard functionality
     </div>
         <div id = "buttons">
-            <button id = "Previous" >Previous</button>
+            <button id = "Correct" >❌ Wrong</button>
             <button id ="Flip">Flip</button>
-            <button id = "Next">Next</button>
+            <button id = "Wrong">✅ Correct</button>
         </div>
-    -->
-</body>
     <canvas id="game_window" width = "window.innerWidth" height = "window.innerHeight"></canvas>
 </body>
 <script>
@@ -42,14 +36,20 @@
     const ctx = canvas.getContext("2d")
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
-    ctx.fillStyle = "#0D374E"
-    ctx.fillRect(0, 0, canvas.width, canvas.height);  
+    
+    //ctx.fillRect(0, 0, canvas.width, canvas.height);  
     // stubs time lol
     // The cards will be inside like a tbalet and you have to get signal strngth to win 
     // So going to add signal minigame
+    function signal{
+        ctx.fillStyle = "white"
+        for(let i = 0;i<4;i++){
+            let bar_height = (i+1*10)
+            ctx.fillRect();
+        }
+    }
     function draw_tablet(){
-        // Need to add more depth
-        // this is the dark rugged casing
+        // want  to add more depth to case but no time :(
         ctx.fillStyle = "black"
         ctx.lineJoin = "round"
         ctx.lineWidth = 90
@@ -58,57 +58,61 @@
         //This is the atenna 
         ctx.lineWidth = 20
         ctx.strokeRect(1400, 25, 8, 130) 
-
         // This is the like black part of the screen
         ctx.strokeStyle = "Black"
-        
         ctx.lineWidth = 50
-        ctx.strokeRect(500, 200, 960, 560) //The like
-
+        ctx.strokeRect(500, 200, 960, 560) 
         // This is the camera dot
         ctx.strokeStyle = "Blue"
+        ctx.lineWidth = 8
+        ctx.strokeRect(1400, 200, 2, 2) 
+        // The screen
+        ctx.fillStyle = "#0D374E" //Right colour ? maybe purple?
+        ctx.lineWidth = 50
+        ctx.fillRect(524, 225, 911, 510) 
+    }
+    function story(){
 
-        // seperate function for screen?
-        //This is the blank screen ( To be completed and filled with stuff) 
-        ctx.fillStyle = '#ffffff'
-        ctx.fillRect(525, 225, 920, 515)
+    }
+    function win(){
         
-        // Blank for the info, may make it to match bg
-    
-   }
-   function draw_screen(text){
-        ctx.fillText(text)
-        // Draw background colour and then just trigger the cards code
-        // Ensure that visibility of the buttons and text turns on and :D
-        // Might need to modify
-   }
-   function tree_draw(){
-        console.log("stub")
-   }
+    }
+    function tree_draw(){
+        console.log("tree's drawn")
+        const background = new Image();
+        background.src = "../assets/images/signal-background.png"
+        background.onload = () => {
+            ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+        }
+    }
 
-    function signal_strength_check(){
+    function signal_decay(){
         let time_since_last_flashcard = 1;
         if (time_since_last_flashcard <= 1){
             console.log("Silly boi")
+        }else if(time_since_last_flashcard <= 5){
+            console.log(filler)
         }
     }
+
     function Signal_finding(){
         let signal_random = Math.random()
         let signal= signal_strength + signal_random 
         if (signal <= 0.3){
             console.log("Filler")
         }else if(signal <= 0.6){
-            console.log("Filler")
+            console.log()
         }else {
             console.log("filler")
         }
     }
+
     function main_loop(){
-        let running = True
-        while (running === True){
-            console.log("filler")
-        }
+        tree_draw()
+        setTimeout(() => {
+            draw_tablet();
+        }, 50); 
     }
-    draw_tablet()
-    draw_screen()
+    main_loop()
+
 </script>

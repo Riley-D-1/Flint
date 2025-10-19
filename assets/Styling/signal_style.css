@@ -7,3 +7,21 @@ body {
 canvas{
     border: none;
 }
+
+#correct{
+    position: absolute;
+
+}
+.flashcards {
+    position: absolute;
+    top: 225px;
+    left: 524px;
+    width: 911px;
+    height: 510px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    pointer-events: auto; /* ensures buttons are clickable */
+}

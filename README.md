@@ -30,3 +30,10 @@ I created flint in order to remove the paywall locked features of popular flashc
 - Visit Github Sites Url - http://riley-d-1.github.io/Flint/
 - Then download the test markdown file
 - Use the flashcard app by importing markdown file and then flashcarding
+### Flashcard shortcut controls
+- The controls for the flashcard use the arrow keys
+- ➡️ for going to the  next flashcard (or correct) 
+- ⬅️ for going back a flashcard (or Wrong)
+- ⬆️ or ⬇️ to flip the flashcard and show the otherside
+You can of course use the buttons but it saves time using arrow keys.
+

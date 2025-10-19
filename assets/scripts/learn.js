@@ -25,7 +25,7 @@ function previous(id){
 }
 
 document.addEventListener('keydown',(event) => {
-if (event.key === ' '){
+if (event.key === 'ArrowUp' || event.key === 'ArrowDown'){
     cur_state = flip(cur_state,id)
 } else if (event.key === 'ArrowRight'){
     id = next(id)

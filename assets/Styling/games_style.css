@@ -6,6 +6,7 @@ img {
 #match_image {
     float: right;
 }
+
 /* I HATE CSS BUT I DID IT :D*/
 
 #text_block{
@@ -30,4 +31,7 @@ h4 {
 }
 body{
     overflow-x: hidden;
+}
+#buttons{
+    text-align: center;
 }
