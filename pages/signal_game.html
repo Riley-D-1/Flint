@@ -5,7 +5,6 @@
     <title>Signal Game</title>
     <link rel = "stylesheet" href = "../assets/Styling/style.css">
     <link rel = "stylesheet" href = "../assets/Styling/signal_style.css">
-    <script src="../assets/scripts/test.js"></script>
 </head>
 <body>
     <div class="heading">
@@ -25,58 +24,10 @@
         </div>
     </div>
         <div id = "buttons">
-            <button id = "Correct" >❌ Wrong</button>
+            <button id = "Wrong" >❌ Wrong</button>
             <button id ="Flip">Flip</button>
-            <button id = "Wrong">✅ Correct</button>
+            <button id = "Correct">✅ Correct</button>
         </div>
     <canvas id="game_window" width = "window.innerWidth" height = "window.innerHeight"></canvas>
 </body>
-<script>
-    const canvas = document.getElementById("game_window")
-    const ctx = canvas.getContext("2d")
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
-    
-    //ctx.fillRect(0, 0, canvas.width, canvas.height);  
-    // stubs time lol
-    // The cards will be inside like a tbalet and you have to get signal strngth to win 
-    // So going to add signal minigame
-    function signal(bar_amount){
-        ctx.fillStyle = "white"
-        for(let i = 0;i<bar_amount;i++){
-            let bar_height = (i+i*10)
-            ctx.fillRect(1350 + i * 15, 300 - bar_height, 10, bar_height);
-        }
-    }
-    function draw_tablet(){
-        // want  to add more depth to case but no time :(
-        ctx.fillStyle = "black"
-        ctx.lineJoin = "round"
-        ctx.lineWidth = 90
-        ctx.strokeStyle = '#1B1B1C'
-        ctx.strokeRect(480, 180, 1000, 600)
-        //This is the atenna 
-        ctx.lineWidth = 20
-        ctx.strokeRect(1400, 25, 8, 130) 
-        // This is the like black part of the screen
-        ctx.strokeStyle = "Black"
-        ctx.lineWidth = 50
-        ctx.strokeRect(500, 200, 960, 560) 
-        // This is the camera dot
-        ctx.strokeStyle = "Blue"
-        ctx.lineWidth = 8
-        ctx.strokeRect(1400, 200, 2, 2) 
-        // The screen
-        ctx.fillStyle = "#0D374E" //Right colour ? maybe purple?
-        ctx.lineWidth = 50
-        ctx.fillRect(524, 225, 911, 510) 
-    }
-    function tree_draw(){
-        console.log("tree's drawn")
-        const background = new Image();
-        background.src = "../assets/images/signal-background.png"
-        background.onload = () => {
-            ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
-        }
-    }
-</script>
+<script src="../assets/scripts/signal.js"></script>

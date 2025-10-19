@@ -12,7 +12,7 @@ Screenshot
 ![alt text](Flint_Screenshot.png)
 
 ## How to I tick the theme Signal
-I created a signal game
+I created a signal game.
 
 ### Why did I create flint?
 I created flint in order to remove the paywall locked features of popular flashcard apps and allow for easier creation of flashcards. I especially wanted to improve on the printing provess of existing flashcard apps which led to the creation of this program.
