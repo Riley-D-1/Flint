@@ -45,4 +45,6 @@ table{
   	background-color: rgb(255, 255, 255);
  	color: rgba(0, 0, 0, 0.829);
 }
-
+#github_link{
+	color:rgb(0, 102, 255);
+}

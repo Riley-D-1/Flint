@@ -9,7 +9,7 @@ to the web and etc.
 - This week (Signal theme week) was only a 8 hour project (mecenaries used cause exams) and is therefore quite lacking
 ### Showcase of Project
 Screenshot
-![alt text](Flint_Screenshot.png)
+![alt text](demo/Flint_Screenshot.png)
 
 ## How to I tick the theme Signal
 I created a signal game, that uses flashcards. If you get a flashcard wrong the signal of the flashcard decays (and if your'e really slow you fail). The game is centered around the idea of cell signals. It requires you to do well and not be slow.

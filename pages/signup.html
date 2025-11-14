@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Sign Up page</title>
+    <link rel='stylesheet' href='../assets/Styling/style.css'>
+</head>
+<body>
+    <div class="heading">
+        <img src="../assets/images/oriented.jpg" alt="Logo" style="max-width: 62.5px; max-height: 62.5px;"></a>
+        <div class="header-r">
+            <a href="index.html">Home</a>
+            <a href="cards.html">Cards</a>
+            <a href="print.html">Print</a>
+            <a href="flash_card_maker.html">Flashcard Maker</a>
+            <a href="games.html">Games</a>
+            <a href="help.html">Help</a>
+        </div>
+    </div>
+    <br>
+    <!-- The div class for CSS selection and readibility-->
+    <div class = "login">
+        <br>
+        Name:
+        <br>
+        <!-- The id allows me to find it using JS selectors-->
+        <!-- The placeholder is a greyed out placeholder that provides the user with an idea of what to put in the box-->
+        <!-- The required key word ensures that these are filled out-->
+        <input id = "name" placeholder = "John Citizen" required >
+        <br>
+        <br>
+        Email:
+        <br>
+        <input id = "email" placeholder = "example@mail.com" required>
+        <br>
+        <br>
+        Date Of Birth:
+        <br>
+        <!-- The type specifies that it's a date input-->
+        <input id = "DOB" type ="date" required>
+        <br>
+        <br>
+        <!-- The div that holds the infomation about the below (whether it passes or not)-->
+        <div id = "password_info">Password:</div>
+        <input type="password" id="password" placeholder="SecurePassword123" oninput="password_info_check()" required>
+        <br>
+        <input type="checkbox" id = "password_show_toggle" onclick="show_password_toggle()">Show Password
+        <br>
+    
+        <br>
+        <br>
+        <!-- The submit button for the form-->
+        <button id = "submit_form" onclick = "check()">Submit</button>
+ 
+    </div>
+</body>
+<!--Has to be below in order to find the values of the html-->
+<script src='../assets/scripts/signup.js'></script>
+</html>
