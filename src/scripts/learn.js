@@ -37,14 +37,14 @@ else if (event.key === 'ArrowLeft'){
 
 // Must be DOM content loaded in order to function correctly 
 document.addEventListener('DOMContentLoaded', function() {
-    const next_button = document.getElementById("Next")
+    const next_button = document.getElementById("next")
        next_button.addEventListener('click',() => {id = next(id);});
     });
 document.addEventListener('DOMContentLoaded', function() {
-    const flip_button = document.getElementById("Flip")
+    const flip_button = document.getElementById("flip")
     flip_button.addEventListener('click', () => {cur_state = flip(cur_state, id);});
 });
 document.addEventListener('DOMContentLoaded', function() {
-    const previous_button = document.getElementById("Previous")
+    const previous_button = document.getElementById("back")
     previous_button.addEventListener('click', () => {id = previous(id);});
 });

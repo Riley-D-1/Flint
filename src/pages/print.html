@@ -11,7 +11,6 @@
 
 </head>
 
-
 <body>
     <div class="heading">
         <img src="../../assets/images/icons/brand_icon.jpg" alt="Logo" style="max-width: 62.5px; max-height: 62.5px;"> 
@@ -26,19 +25,18 @@
         <input type="image" id = "account_" onclick = "account_redirect()" src = "../../assets/images/icons/account_icon.png" alt="Account" style="max-width: 35px; max-height: 35px;"> 
     </div>
     <br>
-    <h3>Not fully implemented</h3>
-    <select id="Flashcard_set_selection">
-        <option value="Double-Sided" disabled>No flashcards found</option>
-    </select>
+    <h2>Not fully implemented</h3>
+    <h2 id = "flashcard_info">Flashcards are not found.</h2>
     <select id="print_type">
         <option value="Double-Sided">Double-Sided</option>
         <option value="Standard"selected>Standard</option>
     </select>
     <button onclick="print_flashcards()">Print flashcard set</button>
-    <h6>
+    <h4>
         Note:
         Need help on what to choose?
         Choose standard if you have a one sided printer but choose Double-Sided if you have dual side printer!
-    </h6>
+    </h4>
 </body>
+<script src = "../scripts/theme_selection.js"></script>
 </html>

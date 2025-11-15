@@ -1,14 +1,14 @@
 # Flint
 ## A flashcard app
-An electron/web based FOSS flashcard application to solve the problems of existing flashcard applications. Flint solves the problems like clunky UI, poor offline functionality , lack of data exporting control, paywalls and the printing of flashcards. It will be expanded on to be the best flashcard app out there.
+An electron/web based FOSS flashcard application to solve the problems of existing flashcard applications. Flint solves the problems like clunky UI, poor offline functionality, lack of data exporting control, paywalls and the printing of flashcards. It will be expanded on to be the best flashcard app out there.
 
 ### Please note
-- The demo is currently  lacking lots of the core ideas and functionality such as printing, saving flashcards
+- The project is currently  lacking lots of the core ideas and functionality such as printing, saving flashcards
 to the web and etc.
 
 ### Showcase of Project
 Screenshot
-![alt text](assets/Demo/Flint_Screenshot.png)
+![alt text](assets/Demo/demo_screenshot.png)
 
 ## How to I tick the theme?
 - I created a space background!

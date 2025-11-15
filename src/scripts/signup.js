@@ -14,9 +14,12 @@ function check(){
     // The operand && will return true only if all values are true
     let password = document.getElementById("password").value
     let email = document.getElementById("email").value
+    let username = document.getElementById("username").value
     if (email.includes("@") === true && email.includes(".com") === true && password_test(password) === true){
         // Debugging statement
         console.log("All valid values")
+        localStorage.setItem("username", username);
+        localStorage.setItem("password", password);
         // You can redirect here
         window.location.href = 'index.html';
     }else{
@@ -33,6 +36,7 @@ function show_password_toggle(){
         password_.type = "password"
     }
 }
+
 
 function password_info_check(){
     let password_2 = document.getElementById("password").value

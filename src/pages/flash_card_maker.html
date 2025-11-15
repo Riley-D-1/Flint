@@ -33,27 +33,28 @@
     
     <br>
     <br>
-    <h3>    Create your own flashcards manually:  
-    <br> * I DO NOT WORK AT THE MOMENT PLEASE USE MARKDOWN FILES
+    <h3>Create your own flashcards manually (works with markdown imported flashcards):  
     </h3>
     <table>
         <thead>
             <tr>
-                <th>Field 1</th>
-                <th>Field 2</th>
+                <th>Front of Flashcard</th>
+                <th>Back of flashcard</th>
             </tr>
         </thead>
         <tbody>
             <td>
                 <tr>
                     <td><input type="text" id ="front_input_flashcard" maxlength="500" placeholder="Type or paste front side"></td>
-                    <td><input type="text" id ="back_input_flashcard" maxlength="500" placeholder="Second Side"></td>
+                    <td><input type="text" id ="back_input_flashcard" maxlength="500" placeholder="Type or paste back side"></td>
                 </tr>
             </td>
         </tbody>
     </table>
     <input type="button" id = "add_flashcard_button"value="Add flashcard" onclick = "flash_add()"></input>
-    
+    <br> <br>
+    <h2>Current Flashcards</h2>
+    <div id="table-container"></div>
 </body>
 <script>
     function convert(){
@@ -83,10 +84,35 @@
     }
 
     function flash_add(){
-        console.log(document.getElementById("front_input_flashcard"))
-        console.log(document.getElementById("front_input_flashcard").value)
-        console.log(document.getElementById("back_input_flashcard").value)
+        const front = document.getElementById("front_input_flashcard").value;
+        const back = document.getElementById("back_input_flashcard").value;
+        let cards = JSON.parse(localStorage.getItem("flashcards")) || [];
+        cards.push({ front, back });
+        localStorage.setItem("flashcards", JSON.stringify(cards));
+        alert("Flashcard added")
     }
-       
-    </script>
+    function show_current_cards(){
+
+        // needs fixes
+        if (localStorage.getItem("Flashcard").length > 1){
+            flashcards = JSON.parse(localStorage.getItem("Flashcard"))
+            const container = document.getElementById('table-container')
+            const table = document.createElement('table')
+            const table_body = document.createElement('table_body')
+            table.appendChild(table_body)
+            container.appendChild(table)  
+            flashcards.forEach(card => {
+                const row_table = document.createElement('tr')
+                const front_table = document.createElement('td')
+                row_table.appendChild(front_table)
+                const table_back = document.createElement('td')
+                table_back.textContent = card.back
+                row_table.appendChild(table_back)
+                table_body.appendChild(row_table)
+            });
+            container.appendChild(table);
+        }
+    }
+</script>
+<script src = "../scripts/theme_selection.js"></script>
 </html>

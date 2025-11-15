@@ -8,7 +8,6 @@ function print_flashcards(){
         // more difficult 
         // so the plan is for each item to match up page wise yk. 
         // so when u print double sided it auto works 
-
         var doc = new jsPDF();
         doc.setFontSize(12);
         let yPos = 10
@@ -32,3 +31,4 @@ function print_flashcards(){
         doc.save("myarray.pdf");
     }  
 }
+

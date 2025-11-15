@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In</title>
+    <link rel="stylesheet" href="../styling/style.css">
+    <script src="../scripts/redirects.js"></script>
 </head>
 <body>
-    
+    <div class="heading">
+        <img src="../../assets/images/icons/brand_icon.jpg" alt="Logo" style="max-width: 62.5px; max-height: 62.5px;"> 
+        <div class="header-r">
+            <a href="index.html">Home</a>
+            <a href="cards.html">Cards</a>
+            <a href="print.html">Print</a>
+            <a href="flash_card_maker.html">Flashcard Maker</a>
+            <a href="games.html">Games</a>
+            <a href="help.html">Help</a>
+        </div>
+        <input type="image" id = "account_" onclick = "account_redirect()" src = "../../assets/images/icons/account_icon.png" alt="Account" style="max-width: 35px; max-height: 35px;"> 
+    </div>
+    <br>
+    Username:
+    <br>
+    <input id = "username" placeholder = "Username" required >
+    <br><br><br>
+    Password:
+    <br>
+    <input type="password" id="password" placeholder="Password" required>
+    <br>
+    <input type="checkbox" id = "password_show_toggle" onclick="show_password_toggle()">Show Password
+    <br><br><br>
+    <!-- The submit button for the form-->
+    <button id = "submit_form" onclick = "check_login()">Submit</button>
 </body>
+<script src = "../scripts/theme_selection.js"></script>
+<script src = "../scripts/login.js"></script>
 </html>
