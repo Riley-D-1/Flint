@@ -1,0 +1,20 @@
+{
+  "name": "flint",
+  "version": "1.0.0",
+  "description": "An electron/web based FOSS flashcard application to solve the problems of existing flashcard applications. Flint solves the problems like clunky UI, poor offline functionality , lack of data exporting control, paywalls and the printing of flashcards. It will be expanded on to be the best flashcard app out there.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Riley-D-1/Flint.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Riley-D-1/Flint/issues"
+  },
+  "homepage": "https://github.com/Riley-D-1/Flint#readme"
+}
