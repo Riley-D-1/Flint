@@ -7,3 +7,8 @@ function check_theme(){
         // No theme set yet or selected dark, set dark theme to local storage
     }
 }
+function theme(){
+    if (localStorage.getItem("theme") === "space"){
+        
+    }
+}

@@ -3,7 +3,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flashcards</title>
-    <link rel="stylesheet" href="../assets/Styling/style.css">    
+    <link rel="stylesheet" href="../styling/style.css">
+    <script src="../scripts/redirects.js"></script>
 </head>
 
 
@@ -11,7 +12,7 @@
 
 <body>
     <div class="heading">
-        <img src="../assets/images/oriented.jpg" alt="Logo" style="max-width: 62.5px; max-height: 62.5px;"></a>
+        <img src="../../assets/images/icons/brand_icon.jpg" alt="Logo" style="max-width: 62.5px; max-height: 62.5px;"> 
         <div class="header-r">
             <a href="index.html">Home</a>
             <a href="cards.html">Cards</a>
@@ -20,6 +21,7 @@
             <a href="games.html">Games</a>
             <a href="help.html">Help</a>
         </div>
+        <input type="image" id = "account_" onclick = "account_redirect()" src = "../../assets/images/icons/account_icon.png" alt="Account" style="max-width: 35px; max-height: 35px;"> 
     </div>
     <h1>
         This is an inprogress development. Please see the github repositry for further details.
@@ -35,11 +37,12 @@
    </ul>
    <h3>
     Flashcard Controls
-       <ul>
-        <li>Space to flip</li>
-        <li>Left and right arrow keys for previous and next</li>
-        <li> Ensure markdown file isn't corrupted</li>
-        <li> Remove the headings as the markdown converter will treat these as flashcards</li>
-   </ul>
+    (The controls for the flashcard use the arrow keys)
+        <ul>
+            <li>➡️ for going to the  next flashcard (or correct)</li> 
+            <li>⬅️ for going back a flashcard (or Wrong)</li> 
+            <li>⬆️ or ⬇️ to flip the flashcard and show the otherside</li>
+            <li>You can of course use the buttons but it saves time using arrow keys.</li>
+        </ul>
    </h3>
 </body>

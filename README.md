@@ -8,7 +8,7 @@ to the web and etc.
 
 ### Showcase of Project
 Screenshot
-![alt text](demo/Flint_Screenshot.png)
+![alt text](assets/Demo/Flint_Screenshot.png)
 
 ## How to I tick the theme?
 - I created a space background!
@@ -27,7 +27,7 @@ I created flint in order to remove the paywall locked features of popular flashc
 - Html
 - Css
 ### Demo Install Instructions
-- Visit Github Sites Url - https://riley-d-1.github.io/Flint/pages/index.html
+- Visit Github Sites Url - https://riley-d-1.github.io/Flint/src/pages/index.html
 - Then download the test markdown file
 - Use the flashcard app by importing markdown file and then flashcarding!
 ### Flashcard shortcut controls

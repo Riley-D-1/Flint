@@ -111,7 +111,7 @@ function draw_tablet(){
 function tree_draw(){
     console.log("tree's drawn")
     const background = new Image();
-    background.src = "../assets/images/signal-background.png"
+    background.src = "../../assets/images/signal-background.png"
     background.onload = () => {
         ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
     }

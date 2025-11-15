@@ -3,17 +3,18 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Print</title>
-    <link rel="stylesheet" href="../assets/Styling/style.css">
-    <link rel="stylesheet" href="../assets/Styling/cards_style.css">
+    <link rel="stylesheet" href="../styling/style.css">
+        <link rel="stylesheet" href="../styling/cards_style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="../assets/scripts/print.js"></script>
+    <script src="../scripts/redirects.js"></script>
 
 </head>
 
 
 <body>
     <div class="heading">
-        <img src="../assets/images/oriented.jpg" alt="Logo" style="max-width: 62.5px; max-height: 62.5px;"></a>
+        <img src="../../assets/images/icons/brand_icon.jpg" alt="Logo" style="max-width: 62.5px; max-height: 62.5px;"> 
         <div class="header-r">
             <a href="index.html">Home</a>
             <a href="cards.html">Cards</a>
@@ -22,13 +23,13 @@
             <a href="games.html">Games</a>
             <a href="help.html">Help</a>
         </div>
+        <input type="image" id = "account_" onclick = "account_redirect()" src = "../../assets/images/icons/account_icon.png" alt="Account" style="max-width: 35px; max-height: 35px;"> 
     </div>
     <br>
     <h3>Not fully implemented</h3>
     <select id="Flashcard_set_selection">
         <option value="Double-Sided" disabled>No flashcards found</option>
     </select>
-
     <select id="print_type">
         <option value="Double-Sided">Double-Sided</option>
         <option value="Standard"selected>Standard</option>
