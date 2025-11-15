@@ -10,7 +10,7 @@ Ai made this test set so dont question layout lol
 | Who wrote *Romeo and Juliet*?                      | William Shakespeare                     |
 | What is the first book of the Bible?               | Genesis                                 |
 | Who played Iron Man in the Marvel movies?          | Robert Downey Jr.                       |
-| What is the name of the wizarding school in Harry Potter? | Hogwarts                          |
+| What is the name of the wizarding school in Harry Potter? | Hogwarts                         |
 | How many players are on a soccer team?             | 11                                      |
 | Which country hosted the 2020 Summer Olympics?     | Japan                                   |
 | Who is known as the "King of Pop"?                 | Michael Jackson                         |
