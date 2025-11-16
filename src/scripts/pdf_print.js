@@ -2,17 +2,14 @@ function print_(){
     container = document.getElementById("container")
     container.innerHTML = ""
     print_type = localStorage.getItem("Print_type")
-    console.log("something")
+    flashcards = JSON.parse(localStorage.getItem("Flashcard"))
+    const table = document.createElement('table')
+    // body of table 
+    let table_body = document.createElement('tbody')
+    table.appendChild(table_body)
+    container.appendChild(table) 
     if (print_type === "standard"){
-        flashcards = JSON.parse(localStorage.getItem("Flashcard"))
-        console.log("making cards_table");
-        // Where the table is going 
-        // The actual table
-        const table = document.createElement('table')
-        // body of table 
-        const table_body = document.createElement('table_body')
-        table.appendChild(table_body)
-        container.appendChild(table)  
+        let i = 0 
         flashcards.forEach(card => {
             // Making back and front of table for each card
             const row_table = document.createElement('tr')
@@ -23,14 +20,62 @@ function print_(){
             table_back.textContent = card.back
             row_table.appendChild(table_back)
             table_body.appendChild(row_table)
+            i++
+            if ((i % 4) === 0){
+                table_body = document.createElement('tbody');
+                table.appendChild(table_body);
+            }
         });
-        container.appendChild(table);
+           
     }else{
-        flashcards.forEach(element => {
-        
+        // rearrange flashcards, so that you can print back to back
+        new_cards = rearrange_flashcards(flashcards)
+        let i = 0 
+        new_cards.forEach(card => {
+            // Making back and front of table for each card
+            const row_table = document.createElement('tr')
+            const front_table = document.createElement('td')
+            front_table.textContent = card.front
+            row_table.appendChild(front_table)
+            const table_back = document.createElement('td')
+            table_back.textContent = card.back
+            row_table.appendChild(table_back)
+            table_body.appendChild(row_table)
+            i++
+            if ((i % 4) === 0){
+                table_body = document.createElement('tbody');
+                table.appendChild(table_body);
+            }
         });
     }
+    // Change padding dynamically based on length 
+    let cells = table.querySelectorAll("td")
+        cells.forEach(element => {
+        let text_length = element.textContent.length
+        if (text_length <= 20){
+            element.style.padding = "120px"
+        }else if (text_length <= 100){
+            element.style.padding = "60px"  
+        }else{
+            element.style.padding = "30px"
+        } 
+    });
     window.print();
+    window.location.href = "/src/pages/print.html"
+}
+
+function rearrange_flashcards(flashcards){
+    let reorganised = []
+    for(let i = 0;i<flashcards.length;i+=8){
+        const chunk = flashcards.slice(i, i + 8);
+        chunk.forEach(element => {
+            reorganised.push({ front: element.front,back:element.front })
+        });
+        chunk.forEach(element => {
+            reorganised.push({ front: element.back,back:element.back })
+        });
+    }
+    return reorganised;
 }
 
 window.addEventListener("load", print_);
