@@ -5,11 +5,11 @@ function print_flashcards(){
         if (document.getElementById("print_type").value ==="Double-Sided"){
             localStorage.setItem("Print_type", "double")
             console.log("double")
-            window.location.href = "src/pages/print_pdf.html"
+            window.location.href = "print_pdf.html"
         }else if (document.getElementById("print_type").value ==="Standard"){
             localStorage.setItem("Print_type", "standard")
             console.log("standard")
-            window.location.href = "src/pages/print_pdf.html"
+            window.location.href = "print_pdf.html"
         }else{
             alert("Error, flashcards not found or print type missing")
         }
