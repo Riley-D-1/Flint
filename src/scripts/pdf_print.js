@@ -53,11 +53,15 @@ function print_(){
         cells.forEach(element => {
         let text_length = element.textContent.length
         if (text_length <= 20){
-            element.style.padding = "120px"
+            // orignal val = 120
+            //element.style.padding = "120px"
+            element.style.padding = "7.5em"
         }else if (text_length <= 100){
-            element.style.padding = "60px"  
+            // orignal is 60
+            element.style.padding = "3.75em"  
         }else{
-            element.style.padding = "30px"
+            // orignal is 30
+            element.style.padding = "1.875em"
         } 
     });
     
