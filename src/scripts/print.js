@@ -15,4 +15,13 @@ function print_flashcards(){
         }
     }
 }
+function check_for_flashcards(){
+    const temp_flashcards = localStorage.getItem("Flashcard");
+    let flash_card_info = document.getElementById("flashcard_print_info")
+    flashcards = JSON.parse(temp_flashcards)
+    if (flashcards.length >= 1){
+        flash_card_info.textContent = "Flashcards found!"
+    }
+}
 
+window.addEventListener("load", check_for_flashcards);

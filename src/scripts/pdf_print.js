@@ -61,19 +61,19 @@ function print_(){
         } 
     });
     window.print();
-    window.location.href = "/src/pages/print.html"
+    window.location.href = "print.html"
 }
 
 function rearrange_flashcards(flashcards){
     let reorganised = []
     for(let i = 0;i<flashcards.length;i+=8){
         const chunk = flashcards.slice(i, i + 8);
-        chunk.forEach(element => {
-            reorganised.push({ front: element.front,back:element.front })
-        });
-        chunk.forEach(element => {
-            reorganised.push({ front: element.back,back:element.back })
-        });
+        for(let j = 0; j<chunk.length-1;j+=2){
+            reorganised.push({ front: chunk[j].front,back: chunk[j+1].front})
+        }
+        for(let k = 0;k<chunk.length-1;k+=2){
+            reorganised.push({ front: chunk[k].back,back: chunk[k+1].back })
+        }
     }
     return reorganised;
 }
