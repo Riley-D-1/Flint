@@ -60,8 +60,12 @@ function print_(){
             element.style.padding = "30px"
         } 
     });
+    
     window.print();
-    window.location.href = "print.html"
+    setTimeout(() => {
+      window.location.href = "print.html"
+    }, 1000);
+
 }
 
 function rearrange_flashcards(flashcards){
