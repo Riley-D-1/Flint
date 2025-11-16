@@ -7,11 +7,11 @@ function login_(){
         alert("Login successful!");
         localStorage.setItem("logged_in",true)
     } else if(!localStorage.getItem("username")  || !localStorage.getItem("password")){
-        localStorage.setItem("logged_in",true)
+        localStorage.setItem("logged_in",false)
         alert("Local Storage password or username missing, please make an account (remake if you already have)");
     }else
         alert("Invalid credentials");
-    }
+}
 function show_password_toggle(){
     let password_ = document.getElementById("password")
     if (password_.type === "password"){

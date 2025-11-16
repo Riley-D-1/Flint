@@ -1,7 +1,8 @@
 function account_login_dets_show(){
     login_info = document.getElementById("login_info")
-    login_container = document.getElementById("container");
-    if (localStorage.getItem("logged") === true){
+    login_container = document.getElementById("login_container");
+    console.log(localStorage.getItem("logged_in"))
+    if (localStorage.getItem("logged_in") === "true"){
         login_info.textContent = "You are logged in!"
         login_container.style.display = "none"
     }else{
