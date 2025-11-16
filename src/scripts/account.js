@@ -3,5 +3,6 @@ if (localStorage.getItem("logged") === true){
     login_button.style = "none"
     signup_button.style = "none"
 }else{
-    
+    login_button.style = "none"
+    signup_button.style = "none"
 }
