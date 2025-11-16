@@ -64,7 +64,7 @@ function print_(){
     window.print();
     setTimeout(() => {
       window.location.href = "print.html"
-    }, 1000);
+    }, 4000);
 
 }
 
