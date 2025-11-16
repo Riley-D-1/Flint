@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flashcard Maker</title>
     <link rel="stylesheet" href="../styling/style.css">
+    <link rel="stylesheet" href="../styling/card_maker.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="../scripts/redirects.js"></script>
     
@@ -54,65 +55,11 @@
     <input type="button" id = "add_flashcard_button"value="Add flashcard" onclick = "flash_add()"></input>
     <br> <br>
     <h2>Current Flashcards</h2>
+    <button onclick="show_current_cards()">Show cards</button>
+    <br>
+    <br>
     <div id="table-container"></div>
 </body>
-<script>
-    function convert(){
-        const fileInput = document.getElementById("markdown_file");
-        const file = fileInput.files[0]
-        try {
-            file.text().then(markdownText => {
-                const tokenList = marked.lexer(markdownText || "");
-                const flashcards = [];
-                for (const token of tokenList) {
-                    if (token.type === "table") {
-                        for (const row of token.rows) {
-                            const front = row[0]?.text || "";
-                            const back = row[1]?.text || "";
-                            flashcards.push({ front, back });
-                        }
-                    }
-                }
-                localStorage.setItem("Flashcard", JSON.stringify(flashcards));
-                console.log(JSON.stringify(flashcards));
-                alert("Markdown converted and saved.");
-            })
-        } catch{
-           alert("Markdown conversion failed. Check help page"); 
-           console.log(console.error());
-        }
-    }
-
-    function flash_add(){
-        const front = document.getElementById("front_input_flashcard").value;
-        const back = document.getElementById("back_input_flashcard").value;
-        let cards = JSON.parse(localStorage.getItem("flashcards")) || [];
-        cards.push({ front, back });
-        localStorage.setItem("flashcards", JSON.stringify(cards));
-        alert("Flashcard added")
-    }
-    function show_current_cards(){
-
-        // needs fixes
-        if (localStorage.getItem("Flashcard").length > 1){
-            flashcards = JSON.parse(localStorage.getItem("Flashcard"))
-            const container = document.getElementById('table-container')
-            const table = document.createElement('table')
-            const table_body = document.createElement('table_body')
-            table.appendChild(table_body)
-            container.appendChild(table)  
-            flashcards.forEach(card => {
-                const row_table = document.createElement('tr')
-                const front_table = document.createElement('td')
-                row_table.appendChild(front_table)
-                const table_back = document.createElement('td')
-                table_back.textContent = card.back
-                row_table.appendChild(table_back)
-                table_body.appendChild(row_table)
-            });
-            container.appendChild(table);
-        }
-    }
-</script>
+<script src = "../scripts/card_maker.js"></script>
 <script src = "../scripts/theme_selection.js"></script>
 </html>
