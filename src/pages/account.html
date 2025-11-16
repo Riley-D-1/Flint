@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Account</title>
     <link rel="stylesheet" href="../styling/style.css">
     <script src="../scripts/redirects.js"></script>
 </head>
@@ -28,7 +28,13 @@
     </select>
     <br> <br>
     <button onclick = "check_theme()">Submit</button>
-    <div id = "login_container"></div>
+    <br><br>
+    <h2 id = "login_info">You are not logged in, Log in below!</h2>
+    <div id = "login_container">
+        <button id = login_button onclick="login_redirect()">Login</button>
+        <br><br>
+        <button id = "sign_up_button" onclick="sign_up_redirect()">Signup</button>
+    </div>
 </body>
 <script src = "../scripts/account.js"></script>
 <script src = "../scripts/theme_selection.js"></script>

@@ -56,14 +56,14 @@ function print_(){
             // orignal val = 120
             //element.style.padding = "120px"
             element.style.padding = "7.5em"
-        }else if (text_length <= 100){
+        }else if (text_length <= 200){
             // orignal is 60
-            element.style.padding = "3.75em"  
+            element.style.padding = "5em"  
         }else{
             // orignal is 30
             element.style.padding = "1.875em"
         } 
-    });
+        });
     
     window.print();
     setTimeout(() => {
