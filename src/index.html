@@ -4,12 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <icon></icon>
-    <link rel="stylesheet" href="../styling/style.css">
-    <script src="../scripts/redirects.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home_style.css">
+    <script src="js/redirects.js"></script>
 </head>
 <body>
     <div class="heading">
-        <img src="../../assets/images/icons/brand_icon.jpg" alt="Logo" style="max-width: 62.5px; max-height: 62.5px;"> 
+        <img src="images/icons/brand_icon.jpg" alt="Logo" style="max-width: 62.5px; max-height: 62.5px;"> 
         <div class="header-r">
             <a href="index.html">Home</a>
             <a href="cards.html">Cards</a>
@@ -18,21 +19,26 @@
             <a href="games.html">Games</a>
             <a href="help.html">Help</a>
         </div>
-        <input type="image" id = "account_" onclick = "account_redirect()" src = "../../assets/images/icons/account_icon.png" alt="Account" style="max-width: 35px; max-height: 35px;"> 
+        <input type="image" id = "account_" onclick = "account_redirect()" src = "images/icons/account_icon.png" alt="Account" style="max-width: 35px; max-height: 35px;"> 
     </div>
     <br>
     <h1> Flint: Sparking your learning!</h1>
     <h1>This is an inprogress development. Please see the github repositry for further details.</h1>
-    Flint is a free OS (Open Source) project that aims to fix the flaws with existing flashcard applicaitons (like quizlet).
+    <div class = "showcase">
+        <img src = "images/filler.png">
+        <h1></h1>
+    </div>
+
+    <p>Flint is a free OS (Open Source) project that aims to fix the flaws with existing flashcard applicaitons (like quizlet).
     The project is an ambitious one. I plan to add:
+    </p>
     <ul>
         <li>Awesome cloud saving that keeps your flashcards accesible for all users</li>
         <li>An awesome electron app (same as web app but physical application that works offline)</li>
         <li>Entertaining games that allow you to learn while having fun and really test your knowledge of the flashcards with a time crunch</li>
         <li>Printing software that works for double sided and single sided and is easy to make IRL flashcards with.</li>
     </ul>
-    <h3>
-        Added Features of the week
+    <h3>Added Features of the week</h3>
         <ul>
             <li>Added Themes</li>
             <li>Space Background is one of the options :D</li>
@@ -41,10 +47,10 @@
             <li>Fixed the manual flashcard maker </li>
             <li> Made a working print system, the main reason for the design of this app orignally</li>
         </ul>
-    </h3>
+    
     <h4>
     <a id = "github_link" href="https://github.com/Riley-D-1/Flint">Github Link</a>
     </h4>
 </body>
-<script src = "../scripts/theme_selection.js"></script>
+<script src = "js/theme_selection.js"></script>
 </html>
