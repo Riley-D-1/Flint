@@ -6,17 +6,8 @@ const temp_flashcards = localStorage.getItem("Flashcard");
 flashcards = JSON.parse(temp_flashcards)
 // Wait hold up let me think chat 
 // So a grid of 3x4
-//canvas.addEventListener('click', function(event) {
-//if (click){
-      //  console.log(EventTarget)
-        // Do something
-    //}else{
-        // Do nothing
-    //}
-//})
-//setInterval(onTimerTick, 33)
-// Use temp values of 0 
 
+// Use values to detect if clicked already
 cards_array = [
     [0,0,0,0],
     [0,0,0,0],
@@ -74,6 +65,7 @@ function get_card_info(row_num,column_num,slice){
 		let slice_index = row_num+column_num
         return slice[slice_index]
     }else{
+        // Draw green outline to signifiy the match
         return ""  
     }
 }
@@ -130,19 +122,26 @@ function match(){
 function main(remaining_cards){
     draw_bg()
     get_slice()
-    remaining_cards_ = update_cards(remaining_cards_)
+    if (first_run = false){
+        remaining_cards_ = update_cards(remaining_cards_)
+    }else{
+        let remaining_cards_ = remaining_cards
+        first_run = false
+    }
+   
     if(remaining_cards_ = "No Cards Left"){
         console.log("No Cards Left")
         // Display 
         end_game()
+        alert("Changing to homepage")
         window.location.href = 'index.html';
         clearInterval(game_loop);
         // Make new cards and restart the round
     }else{
-        remaining_cards = update_cards
+        remaining_cards = update_cards()
     }
     draw_cards()
 }
 remaining_cards = make_match_cards(flashcards)
-let game_loop = setInterval(main(remaining_cards), 33);
+let game_loop = setInterval(main(remaining_cards), 400000);
 

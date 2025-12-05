@@ -10,13 +10,10 @@ to the web and etc.
 Screenshot
 ![alt text](assets/Demo/demo_screenshot.png)
 ## Added Features of the week
-- Added Themes
-- Space Background is one of the options :D
-- Added signup
-- Added login system
-- Fixed bugs and pretified existing
-- Fixed the manual flashcard maker
-
+- Worked on changing to express.js framework
+- Worked on changing the account system(WIP)
+- Created a matching game with the flashcards
+- Improved some styling
 ## How to I tick the theme (space)?
 - I created a space background!
 - I also used lots of spacing in my html if that counts as well lol.
