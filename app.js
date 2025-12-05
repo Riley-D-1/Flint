@@ -1,19 +1,20 @@
-import express from "express";
+import express from 'express';
 import cors from "cors";
 //import { toNodeHandler, fromNodeHeaders } from "better-auth/node";
-import { auth } from "./src/lib/auth.js";
+//import { auth } from "./src/lib/auth.js";
+
+//app.use("/auth", auth.express());
+// Start the server
+// App pathing 
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use("/auth", auth.express());
-// Start the server
-// App pathing 
 app.use(express.static('src'));
 app.post('/login', () => {
-    res.sendFile(path.join(process.cwd(), "src/sign_in.html"))
+	res.sendFile(path.join(process.cwd(), "src/sign_in.html"))
 })
 app.post('/logout', () => {
-  // to be fixed
+// to be fixed
 })
 app.get("/", () => {
 	res.sendFile(path.join(process.cwd(), "src/index.html"))
@@ -24,9 +25,11 @@ app.get("/games", () => {
 app.get("/about", () => {
 	res.sendFile(path.join(process.cwd(), "src/about.html"))
 })
-app.get("/about", () => {
-	res.sendFile(path.join(process.cwd(), "src/about.html"))
+app.get("/account", () => {
+	res.sendFile(path.join(process.cwd(), "src/account.html"))
 })
 
+
+
 // Exporting app to be used on server.js
-module.exports(app)
+export default app;

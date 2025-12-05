@@ -9,6 +9,19 @@ h1,h2,h3,h4,h5,h6 {
 	margin-left: 1vw;
 	color: white;
 }
+p{
+	margin-left: 1vw;	
+}
+
+input{
+	margin-left: 1vw;		
+}
+button,select{
+	border: none;
+	background-color:blue;
+	color:white;
+	margin-left: 1vw;	
+}
 table{
 	margin-left: 1vw;
 	background-color: rgb(23, 30, 161)

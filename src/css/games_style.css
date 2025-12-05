@@ -1,37 +1,54 @@
 img {
+    margin-left: 1vw;
     max-width: 45%;
     height: auto;
     display: inline-block;
 }
-#match_image {
+#match_image {	
     float: right;
+    margin:0
 }
-
-/* I HATE CSS BUT I DID IT :D*/
-
 #text_block{
     display: flex;
-    justify-content: space-between;
+}
+.game{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s ease
 }
 #signal_text,#match_text{
-    width: 45%;
+    width: 50%;
 }
 h2 {
+    margin-left: 1vw;
     max-width: 45%;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     padding: 0;
 }
-
+p{
+    margin-left: 1vw;
+}
 h4 {
+    margin-top: 0;
+    margin-bottom: 0;
     height: auto;
-    margin: 0;
+    margin-left: 1vw;
     padding: 0;
     max-width: 100%;
     text-align: left; 
 }
+
 body{
     overflow-x: hidden;
 }
 #buttons{
     text-align: center;
+}
+#match_text{
+    margin-top:8px;
+    float: right;
 }

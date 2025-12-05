@@ -10,8 +10,8 @@ to the web and etc.
 Screenshot
 ![alt text](assets/Demo/demo_screenshot.png)
 ## Added Features of the week
-- Worked on changing to express.js framework
-- Worked on changing the account system(WIP)
+- Worked on changing to express.js framework from vanilla JS, HTML and CSS using github static pages
+- Worked on changing the account system (WIP)
 - Created a matching game with the flashcards
 - Improved some styling
 ## How to I tick the theme (space)?
