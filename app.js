@@ -15,16 +15,7 @@ app.post("/logout", (req, res) => {
   res.send("Logout route not yet implemented");
 });
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "src", "index.html"));
-});
-app.get("/games", (req, res) => {
-  res.sendFile(path.join(__dirname, "src", "about.html"));
-});
-app.get("/about", (req, res) => {
-  res.sendFile(path.join(__dirname, "src", "about.html"));
-});
-app.get("/account", (req, res) => {
-  res.sendFile(path.join(__dirname, "src", "account.html"));
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 // Exporting app
 export default app;
