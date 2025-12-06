@@ -7,7 +7,7 @@ An electron/web based FOSS flashcard application to solve the problems of existi
 - # FEATURES ARE BROKEN IN THIS UPDATE (LOGIN AND SIGNUP + ACCOUNT FEATUREES)
 ### Showcase of Project
 Screenshot
-![alt text](src\images\Demo\demo_screenshot.png)
+![Screenshot](src\images\Demo\demo_screenshot.png)
 ## Added Features of the week
 - Worked on changing to express.js framework from vanilla JS, HTML and CSS using github static pages
 - Worked on changing the account system (WIP)
@@ -27,7 +27,7 @@ I created flint in order to remove the paywall locked features of popular flashc
 - Html
 - Css
 ### Demo Install Instructions
-- Visit Github Sites Url - https://riley-d-1.github.io/Flint/src/pages/index.html
+- Visit Url - https://flint-six.vercel.app/
 - Then download the test markdown file
 - Use the flashcard app by importing markdown file and then flashcarding!
 ### Flashcard shortcut controls

@@ -1,6 +1,5 @@
 import express from 'express';
 import cors from "cors";
-const { createServer } = require("@vercel/node")
 //import { toNodeHandler, fromNodeHeaders } from "better-auth/node";
 //import { auth } from "./src/lib/auth.js";
 
