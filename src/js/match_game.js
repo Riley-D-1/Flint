@@ -3,7 +3,15 @@ const ctx = canvas.getContext("2d")
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
 const temp_flashcards = localStorage.getItem("Flashcard");
-flashcards = JSON.parse(temp_flashcards)
+if (temp_flashcards = null){
+    ctx.fillStyle = 'rgb(0, 0, 60)';
+    ctx.fillRect(0,0,canvas.width,canvas.height)
+    alert("Cards not found, sending you home")
+    window.location.href = "index.html"
+}else{
+    flashcards = JSON.parse(temp_flashcards)
+}
+
 let first_run = true;
 let first_click = null
 let matched = []

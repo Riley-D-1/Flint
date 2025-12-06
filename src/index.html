@@ -3,7 +3,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <icon></icon>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home_style.css">
     <script src="js/redirects.js"></script>
@@ -22,9 +24,14 @@
         <input type="image" id = "account_" onclick = "account_redirect()" src = "images/icons/account_icon.png" alt="Account" style="max-width: 35px; max-height: 35px;"> 
     </div>
     <br>
-    <h1> Flint: Sparking your learning!</h1>
-    <h1>This is an inprogress development. Please see the github repositry for further details.</h1>
-
+    <div id = "call_to_action">
+        <h1> Flint: Sparking your learning!</h1>
+        <p>An electron/web based FOSS flashcard application to solve the problems of existing flashcard applications. Flint solves the problems like clunky UI, poor offline functionality, lack of data exporting control, paywalls and the printing of flashcards. It will be expanded on to be the best flashcard app out there.</p>
+        <button class= "big_button" onclick="maker_redirect()">Get started by making/importing your cards</button>
+    </div>
+    <br><br>
+    <h4>This is an inprogress development. Please see the github repositry for further details.</h1>
+    
     <p>Flint is a free OS (Open Source) project that aims to fix the flaws with existing flashcard applicaitons (like quizlet).
     The project is an ambitious one. I plan to add:
     </p>
@@ -36,12 +43,11 @@
     </ul>
     <h3>Added Features of the week</h3>
         <ul>
-            <li>Added Themes</li>
-            <li>Space Background is one of the options :D</li>
-            <li>Added signup</li>
+            <li>Worked on changing to express.js framework from vanilla JS, HTML and CSS using github static pages</li>
+            <li>Worked on changing the account system (WIP)</li>
+            <li>Created a matching game with the flashcards</li>
             <li>Added login system</li>
-            <li>Fixed the manual flashcard maker </li>
-            <li> Made a working print system, the main reason for the design of this app orignally</li>
+            <li>Improved some styling</li>
         </ul>
     
     <h4>

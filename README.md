@@ -3,20 +3,16 @@
 An electron/web based FOSS flashcard application to solve the problems of existing flashcard applications. Flint solves the problems like clunky UI, poor offline functionality, lack of data exporting control, paywalls and the printing of flashcards. It will be expanded on to be the best flashcard app out there.
 
 ### Please note
-- The project is currently  lacking lots of the core ideas and functionality such as printing, saving flashcards
-to the web and etc.
-
+- The project is currently a WIP 
+- # FEATURES ARE BROKEN IN THIS UPDATE (LOGIN AND SIGNUP + ACCOUNT FEATUREES)
 ### Showcase of Project
 Screenshot
-![alt text](assets/Demo/demo_screenshot.png)
+![alt text](src\images\Demo\demo_screenshot.png)
 ## Added Features of the week
 - Worked on changing to express.js framework from vanilla JS, HTML and CSS using github static pages
 - Worked on changing the account system (WIP)
 - Created a matching game with the flashcards
 - Improved some styling
-## How to I tick the theme (space)?
-- I created a space background!
-- I also used lots of spacing in my html if that counts as well lol.
 
 ### Why did I create flint?
 I created flint in order to remove the paywall locked features of popular flashcard apps and allow for easier creation of flashcards. I especially wanted to improve on the printing provess of existing flashcard apps which led to the creation of this program.

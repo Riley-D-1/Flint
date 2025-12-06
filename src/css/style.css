@@ -2,8 +2,10 @@ body {
 	background-color: rgb(0, 0, 60);
 	margin-top: 0;
 	padding-left: 0;
+	padding-right: 0;
 	margin-left: 0;
 	color:white;
+  	font-family: "Inter", sans-serif;
 }
 h1,h2,h3,h4,h5,h6 {
 	margin-left: 1vw;
@@ -13,14 +15,19 @@ p{
 	margin-left: 1vw;	
 }
 
+
 input{
 	margin-left: 1vw;		
 }
 button,select{
 	border: none;
-	background-color:blue;
+	background-color: rgb(23, 30, 161);
 	color:white;
-	margin-left: 1vw;	
+	margin-left: 1vw;
+	padding:20px;
+	padding-top:10px;
+	padding-bottom:10px;
+	border-radius: 6px;	
 }
 table{
 	margin-left: 1vw;
