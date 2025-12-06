@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d")
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
 const temp_flashcards = localStorage.getItem("Flashcard");
-if (temp_flashcards = null){
+if (temp_flashcards === null){
     ctx.fillStyle = 'rgb(0, 0, 60)';
     ctx.fillRect(0,0,canvas.width,canvas.height)
     alert("Cards not found, sending you home")
