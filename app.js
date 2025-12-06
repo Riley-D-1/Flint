@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from "cors";
+const { createServer } = require("@vercel/node")
 //import { toNodeHandler, fromNodeHeaders } from "better-auth/node";
 //import { auth } from "./src/lib/auth.js";
 
@@ -11,6 +12,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('src'));
 app.post('/login', () => {
+	// to be fixed
 	res.sendFile(path.join(process.cwd(), "src/sign_in.html"))
 })
 app.post('/logout', () => {
@@ -28,8 +30,5 @@ app.get("/about", () => {
 app.get("/account", () => {
 	res.sendFile(path.join(process.cwd(), "src/account.html"))
 })
-
-
-
 // Exporting app to be used on server.js
 export default app;
