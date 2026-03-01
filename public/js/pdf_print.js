@@ -58,12 +58,11 @@ function rearrange_flashcards(flashcards) {
         }
         for (let j = 0; j < 8; j += 2) {
             reorganised.push({
-                front: chunk[j].back,
-                back: chunk[j + 1].back
+                front: chunk[j + 1].back,
+                back: chunk[j].back
             });
         }
     }
     return reorganised;
 }
-
 window.addEventListener("load", print_);
