@@ -13,14 +13,27 @@ function print_(){
         flashcards = new_cards
     }
     let i = 0 
+    let page_count = 0;
     flashcards.forEach(card => {
         // Making back and front of table for each card
         const row = document.createElement("tr");
         const front = document.createElement("td");
         front.textContent = card.front;
+        if (page_count % 2 === 1 && print_type != "standard") {
+            front.style.fontStyle = "italic";
+            front.style.fontWeight = "bold"; 
+        }
         row.appendChild(front);
         const back = document.createElement("td");
         back.textContent = card.back;
+        if (print_type === "standard"){
+            back.style.fontStyle = "italic";
+            back.style.fontWeight = "bold";
+        }
+        if (page_count % 2 === 1 && print_type != "standard") {
+            back.style.fontStyle = "italic";
+            back.style.fontWeight = "bold"; 
+        }
         row.appendChild(back);
         table_body.appendChild(row)
         i++
@@ -28,6 +41,7 @@ function print_(){
             const pageBreak = document.createElement("div");
             pageBreak.className = "page";
             container.appendChild(pageBreak);
+            page_count++;
             // Start a new table
             const newTable = document.createElement("table");
             const newBody = document.createElement("tbody");
