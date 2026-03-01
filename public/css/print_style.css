@@ -1,20 +1,20 @@
-@media print{
-    table{
-        width: 98%;
-        border-collapse: collapse;
-        table-layout: auto;
-    }
-    td{
-        border: 2px solid #000000;
-        max-height: 24vh;
-        word-wrap: break-word;
-    }
+@media print {
+  td {
+    height: 5.4cm;
+    padding: 0.5cm;
+    text-align: center;
+    vertical-align: middle;
+    overflow-wrap: break-word;
+    border: 2px solid #000;
+  }
 
-    tr {
-        text-align: center;
-        break-inside: avoid;
-    }
-    tbody {
-        break-after: page;
-    }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  .page {
+    break-after: page;
+  }
 }
