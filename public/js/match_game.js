@@ -80,8 +80,24 @@ function get_card_info(row_num,column_num,slice){
     }
 }
 
+function text_split(split_size, text_content ){
+	let words = text_content.split(" ");
+	let lines = [];
+	let currentLine = "";
+	for (let i = 0; i < words.length; i++) {
+		let word = words[i];
+
+		if ((currentLine + word).length <= split_size) {
+			currentLine += (currentLine ? " " : "") + word;
+		} else {
+			if (currentLine) lines.push(currentLine);
+			currentLine = word;
+		}
+	}
+	if (currentLine) lines.push(currentLine);
+	return lines;
+}
 function draw_cards(slice,selected,matched){
-    ctx.lineWidth  = 5
     ctx.lineWidth = 2
     ctx.strokeStyle = '#c5c4c4ff'
     ctx.lineJoin = "round"
@@ -114,8 +130,22 @@ function draw_cards(slice,selected,matched){
             ctx.textBaseline = "middle";
             ctx.fillStyle = "white";
             // Probably needs to be improve if time is still present (text length matters)
+			if (text_content.length > 30){
+				if (text_content.length > 300){
+					ctx.font = "20px Comic Sans"
+				}
+				let lines = text_split(35, text_content);
+				for(let k = 0; k < lines.length; k++){
+					ctx.fillText(
+						lines[k],
+						(canvas.width/4)*i+50 + (canvas.width/6)/2,
+						(canvas.height/4)*j+150 + (canvas.height/5)/2 + (k * 18) - ((lines.length-1)*9)
+					);
+				}
+				continue;
+			}
             ctx.fillText( text_content, (canvas.width/4)*i+50 + (canvas.width/6)/2, (canvas.height/4)*j+150 + (canvas.height/5)/2 )
-        }
+		}
     }
 }
 
